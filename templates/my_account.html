@@ -41,130 +41,9 @@
 
         <!-- Add your site or application content here -->
 		<!-- header-area-start -->
-        <header>
-			<!-- header-top-area-start -->
-			<div class="header-top-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-12">
-							<div class="language-area">
-								<ul>
-									
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-12">
-							<div class="account-area text-end">
-								<ul>
-									<!-- <li><a href="my-account.html">My Account</a></li> -->
-									<!-- <li><a href="checkout.html">Checkout</a></li> -->
-									<!-- <li><a href="login.html">Sign in</a></li> -->
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- header-top-area-end -->
-			<!-- header-mid-area-start -->
-			<div class="header-mid-area ptb-40">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-3 col-md-5 col-12">
-							<div class="header-search">
-								<form action="#">
-									<input type="text" placeholder="Search entire store here..." />
-									<a href="#"><i class="fa fa-search"></i></a>
-								</form>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-4 col-12">
-							<div class="logo-area text-center logo-xs-mrg">
-								<a href="index.html"><img src="/static/img/logo/logo.png" alt="logo" /></a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-12">
-							<div class="my-cart">
-								<ul>
-									
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- header-mid-area-end -->
-			<!-- main-menu-area-start -->
-			<div class="main-menu-area d-md-none d-none d-lg-block sticky-header-1" id="header-sticky">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="menu-area">
-								<nav>
-									<ul>
-										<li class="active"><a href="index.html">My account<i</i></a>
-											<div class="sub-menu">
-												<ul>
-													
-												</ul>
-											</div>
-										</li>
-										
-									</ul>
-								</nav>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- main-menu-area-end -->
-			<!-- mobile-menu-area-start -->
-			<div class="mobile-menu-area d-lg-none d-block fix">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="mobile-menu">
-								<nav id="mobile-menu-active">
-									<ul id="nav">
-										<li><a href="/">Home</a>
-											<ul>
-												
-											</ul>
-										</li>
-										
-										
-										<li><a href="product-details.html">Page</a>
-											<ul>
-												<li><a href="shop.html">shop</a></li>
-                                                <li><a href="shop-list.html">shop list view</a></li>
-                                                <li><a href="product-details.html">product-details</a></li>
-                                                <li><a href="product-details-affiliate.html">product-affiliate</a></li>
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="blog-details.html">blog-details</a></li>
-                                                <li><a href="contact.html">contact</a></li>
-                                                <li><a href="about.html">about</a></li>
-                                                <li><a href="login.html">login</a></li>
-                                                <li><a href="register.html">register</a></li>
-                                                <li><a href="my-account.html">my-account</a></li>
-                                                <li><a href="cart.html">cart</a></li>
-                                                <li><a href="compare.html">compare</a></li>
-                                                <li><a href="checkout.html">checkout</a></li>
-                                                <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
-											</ul>
-										</li>
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- mobile-menu-area-end -->
-		</header>
-		<!-- header-area-end -->
-		<!-- breadcrumbs-area-start -->
+        
+        {% include 'partial/header.html' %}
+
 		<div class="breadcrumbs-area mb-70">
 			<div class="container">
 				<div class="row">
@@ -218,7 +97,7 @@
                                                 address</a> -->
                                             <a href="#account-info" data-bs-toggle="tab"><i class="fa fa-user"></i> Edit
                                                 Profile</a>
-                                            <a href="login.html"><i class="fa fa-sign-out"></i> Logout</a>
+                                            <a href="/log_in/"><i class="fa fa-sign-out"></i> Logout</a>
                                         </div>
                                     </div>
                                     <!-- My Account Tab Menu End -->
@@ -232,7 +111,7 @@
                                                     <h5>Dashboard</h5>
                                                     <div class="welcome">
                                                         <p>Hello, <strong>Erik Jhonson</strong> (If Not <strong>Jhonson
-                                                            !</strong><a href="login-register.html" class="logout"> Logout</a>)</p>
+                                                            !</strong><a href="log_in/" class="logout"> Logout</a>)</p>
                                                     </div>
                                                     <p class="mb-0">From your account dashboard. you can easily check &
                                                         view your recent orders, manage your shipping and billing addresses
@@ -286,71 +165,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Single Tab Content End -->
-
-                                            <!-- Single Tab Content Start -->
-                                            <div class="tab-pane fade" id="download" role="tabpanel">
-                                                <div class="myaccount-content">
-                                                    <h5>Downloads</h5>
-                                                    <div class="myaccount-table table-responsive text-center">
-                                                        <table class="table table-bordered">
-                                                            <thead class="thead-light">
-                                                                <tr>
-                                                                    <th>Product</th>
-                                                                    <th>Date</th>
-                                                                    <th>Expire</th>
-                                                                    <th>Download</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    
-                                                                    <td>Aug 22, 2018</td>
-                                                                    <td>Yes</td>
-                                                                    <td><a href="#" class="btn btn-sqr"><i
-                                                                        class="fa fa-cloud-download"></i>
-                                                                            Download File</a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    
-                                                                    <td>Sep 12, 2018</td>
-                                                                    <td>Never</td>
-                                                                    <td><a href="#" class="btn btn-sqr"><i
-                                                                        class="fa fa-cloud-download"></i>
-                                                                            Download File</a></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- Single Tab Content End -->
-
-                                            <!-- Single Tab Content Start -->
-                                            <div class="tab-pane fade" id="payment-method" role="tabpanel">
-                                                <div class="myaccount-content">
-                                                    <h5>Payment Method</h5>
-                                                    <p class="saved-message">You Can't Saved Your Payment Method yet.</p>
-                                                </div>
-                                            </div>
-                                            <!-- Single Tab Content End -->
-
-                                            <!-- Single Tab Content Start -->
-                                            <div class="tab-pane fade" id="address-edit" role="tabpanel">
-                                                <div class="myaccount-content">
-                                                    <h5>Billing Address</h5>
-                                                    <address>
-                                                        <p><strong>Erik Jhonson</strong></p>
-                                                        <p>1355 Market St, Suite 900 <br>
-                                                            San Francisco, CA 94103</p>
-                                                            <p>Mobile: (123) 456-7890</p>
-                                                    </address>
-                                                    <a href="#" class="btn btn-sqr"><i class="fa fa-edit"></i>
-                                                        Edit Address</a>
-                                                </div>
-                                            </div>
-                                            <!-- Single Tab Content End -->
-
+                                           
                                             <!-- Single Tab Content Start -->
                                             <div class="tab-pane fade" id="account-info" role="tabpanel">
                                                 <div class="myaccount-content">
@@ -376,7 +191,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="single-input-item">
-                                                                <label for="display-name" class="required">Display Name</label>
+                                                                <label for="display-name" class="required">Username</label>
                                                                 <input type="text" id="display-name" placeholder="Display Name" />
                                                             </div>
                                                             <div class="single-input-item">
@@ -384,26 +199,26 @@
                                                                 <input type="email" id="email" placeholder="Email Address" />
                                                             </div>
                                                             <fieldset>
-                                                                <legend>Password change</legend>
+                                                                <!-- <legend>Password change</legend> -->
                                                                 <div class="single-input-item">
-                                                                    <label for="current-pwd" class="required">Current
-                                                                        Password</label>
-                                                                    <input type="password" id="current-pwd" placeholder="Current Password" />
+                                                                    <label for="current-pwd" class="required">Change Phone
+                                                                        Number</label>
+                                                                    <input type="password" id="current-pwd" placeholder="+233" />
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-lg-6">
                                                                         <div class="single-input-item">
-                                                                            <label for="new-pwd" class="required">New
-                                                                                Password</label>
-                                                                            <input type="password" id="new-pwd" placeholder="New Password" />
+                                                                            <label for="new-pwd" class="required">Bio(about yourself)
+                                                                                </label>
+                                                                            <input type="password" id="new-pwd" placeholder="" />
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="single-input-item">
-                                                                            <label for="confirm-pwd" class="required">Confirm
-                                                                                Password</label>
-                                                                            <input type="password" id="confirm-pwd" placeholder="Confirm Password" />
-                                                                        </div>
+                                                                    <!-- <div class="col-lg-6"> -->
+                                                                        <!-- <div class="single-input-item"> -->
+                                                                            <!-- <label for="confirm-pwd" class="required">Confirm
+                                                                                Password</label> -->
+                                                                            <!-- <input type="password" id="confirm-pwd" placeholder="Confirm Password" /> -->
+                                                                        <!-- </div> -->
                                                                     </div>
                                                                 </div>
                                                             </fieldset>
@@ -434,11 +249,11 @@
 							<div class="footer-top-menu bb-2">
 								<nav>
 									<ul>
-										<li><a href="#">home</a></li>
-										<li><a href="#">Enable Cookies</a></li>
-										<li><a href="#">Privacy and Cookie Policy</a></li>
-										<li><a href="#">contact us</a></li>
-										<li><a href="#">blog</a></li>
+										<li><a href="/">home</a></li>
+										<li><a href="log_in/">Log In</a></li>
+										<li><a href="sign_up/">Sign Up</a></li>
+										<li><a href="my_account/">My Account</a></li>
+										<li><a href="summary/">Summary</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -456,46 +271,25 @@
 				                <div class="col-lg-4 col-md-4 col-12">
                                     <div class="single-footer br-2 xs-mb">
                                         <div class="footer-title mb-20">
-                                            <h3>Products</h3>
+                                            
                                         </div>
-                                        <div class="footer-mid-menu">
-                                            <ul>
-                                                <li><a href="about.html">About us</a></li>
-                                                <li><a href="#">Prices drop </a></li>
-                                                <li><a href="#">New products</a></li>
-                                                <li><a href="#">Best sales</a></li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="single-footer br-2 xs-mb">
                                         <div class="footer-title mb-20">
-                                            <h3>Our company</h3>
+                                            
                                         </div>
-                                        <div class="footer-mid-menu">
-                                            <ul>
-                                                <li><a href="contact.html">Contact us</a></li>
-                                                <li><a href="#">Sitemap</a></li>
-                                                <li><a href="#">Stores</a></li>
-                                                <li><a href="register.html">My account </a></li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="single-footer br-2 xs-mb">
                                         <div class="footer-title mb-20">
-                                            <h3>Your account</h3>
+                                            
                                         </div>
-                                        <div class="footer-mid-menu">
-                                            <ul>
-                                                <li><a href="contact.html">Addresses</a></li>
-                                                <li><a href="#">Credit slips </a></li>
-                                                <li><a href="#"> Orders</a></li>
-                                                <li><a href="#">Personal info</a></li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
                                 </div>
 				            </div>
@@ -503,16 +297,9 @@
 				        <div class="col-lg-4 col-md-12">
                             <div class="single-footer mrg-sm">
                                 <div class="footer-title mb-20">
-                                    <h3>STORE INFORMATION</h3>
+                                    
                                 </div>
-                                <div class="footer-contact">
-                                    <p class="adress">
-                                        <span>My Company</span>
-                                        Your address goes here.
-                                    </p>
-                                    <p><span>Call us now:</span> 0123456789</p>
-                                    <p><span>Email:</span>  demo@example.com</p>
-                                </div>
+                                
                             </div>
 				        </div>
 					</div>
@@ -525,12 +312,12 @@
 					<div class="row bt-2">
 						<div class="col-lg-6 col-md-6 col-12">
 							<div class="copy-right-area">
-								<p>&copy; 2022 <strong> Koparion </strong> Mede with ❤️ by <a href="https://hasthemes.com/" target="_blank"><strong>HasThemes</strong></a></p>
+								<p>&copy; 2023 <strong> Ria </strong> Made with ❤️ <a href="https://hasthemes.com/" target="_blank"><strong></strong></a></p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-12">
 							<div class="payment-img text-end">
-								<a href="#"><img src="/static/img/1.png" alt="payment" /></a>
+								<!-- <a href="#"><img src="/static/img/1.png" alt="payment" /></a> -->
 							</div>
 						</div>
 					</div>

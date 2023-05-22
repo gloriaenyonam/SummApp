@@ -41,87 +41,9 @@
 
         <!-- Add your site or application content here -->
 		<!-- header-area-start -->
-        <header>
-			<!-- header-top-area-start -->
-			<div class="header-top-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-12">
-							<div class="language-area">
-								<ul>
-									
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-12">
-							<div class="account-area text-end">
-								<ul>
-									
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- header-top-area-end -->
-			<!-- header-mid-area-start -->
-			<div class="header-mid-area ptb-40">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-5 col-12">
-							<div class="header-search">
-								<form action="#">
-									<input type="text" placeholder="Search book's summary here..." />
-									<a href="#"><i class="fa fa-search"></i></a>
-								</form>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-4 col-12">
-							<div class="logo-area text-center logo-xs-mrg">
-								
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 col-12">
-							
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- header-mid-area-end -->
-			<!-- main-menu-area-start -->
-			<div class="main-menu-area d-md-none d-none d-lg-block sticky-header-1" id="header-sticky">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="menu-area">
-								<nav>
-									<ul>
-										<li class="active"><a href="log_in/">Log In<i class="fa fa-angle-down"></i></a>
-											<div class="sub-menu">
-												<ul>
-													
-											</div>
-										</li>
-										
 
-										</li>
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- mobile-menu-area-end -->
-		</header>
-		<!-- header-area-end -->
-		<!-- breadcrumbs-area-start -->
+        {% include 'partial/header.html' %}
+
 		<div class="breadcrumbs-area mb-70">
 			<div class="container">
 				<div class="row">
@@ -129,15 +51,14 @@
 						<div class="breadcrumbs-menu">
 							<ul>
 								<li><a href="/">Home</a></li>
-								<li><a href="log_in.html" class="active">login</a></li>
+								<li><a href="log_in/" class="active">Log In</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- breadcrumbs-area-end -->
-		<!-- user-login-area-start -->
+
 		<div class="user-login-area mb-70">
 			<div class="container">
 				<div class="row">
@@ -167,6 +88,8 @@
 				</div>
 			</div>
 		</div>
+
+		
 		<!-- user-login-area-end -->
 		<!-- footer-area-start -->
 		<footer>
@@ -178,9 +101,11 @@
 							<div class="footer-top-menu bb-2">
 								<nav>
 									<ul>
-										<li><a href="#">home</a></li>
-										
-										<li><a href="#">contact us</a></li>
+										<li><a href="/">Home</a></li>
+										<li><a href="log_in/">Log In</a></li>
+										<li><a href="sign_up/">Sign Up</a></li>
+										<li><a href="my_account/">My Account</a></li>
+										<li><a href="summary/">Summary</a></li>
 										
 									</ul>
 								</nav>
@@ -211,16 +136,9 @@
                                 <div class="col-lg-4 col-md-4 col-12">
                                     <div class="single-footer br-2 xs-mb">
                                         <div class="footer-title mb-20">
-                                            <h3>Your account</h3>
+                                            
                                         </div>
-                                        <div class="footer-mid-menu">
-                                            <ul>
-                                                <li><a href="contact.html">Addresses</a></li>
-                                                <li><a href="#">Credit slips </a></li>
-                                                <li><a href="#"> Orders</a></li>
-                                                <li><a href="#">Personal info</a></li>
-                                            </ul>
-                                        </div>
+                                        
                                     </div>
                                 </div>
 				            </div>
@@ -228,16 +146,9 @@
 				        <div class="col-lg-4 col-md-12">
                             <div class="single-footer mrg-sm">
                                 <div class="footer-title mb-20">
-                                    <h3>SUMMARY INFORMATION</h3>
+                                    
                                 </div>
-                                <div class="footer-contact">
-                                    <p class="adress">
-                                        <span>My Company</span>
-                                        Your address goes here.
-                                    </p>
-                                    <p><span>Call us now:</span> 0123456789</p>
-                                    <p><span>Email:</span>  demo@example.com</p>
-                                </div>
+                                
                             </div>
 				        </div>
 					</div>
@@ -250,7 +161,7 @@
 					<div class="row bt-2">
 						<div class="col-lg-6 col-md-6 col-12">
 							<div class="copy-right-area">
-								<p>&copy; 2022 <strong> Ria </strong> made with ❤️ <a href="https://hasthemes.com/" target="_blank"><strong></strong></a></p>
+								<p>&copy; 2023 <strong> Ria </strong> made with ❤️ <a href="https://hasthemes.com/" target="_blank"><strong></strong></a></p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-12">

@@ -1025,23 +1025,7 @@ body {
     width: 50%;
 }
 
-.menu-area ul li .sub-menu {
-    background: #fff;
-    box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
-    left: 0;
-    position: absolute;
-    top: 100%;
-    z-index: 45;
-    padding: 10px 20px 15px;
-    position: absolute;
-    z-index: 6;
-    transform: scaleY(0);
-    transform-origin: 0 0 0;
-    transition: .5s;
-    width: 200px;
-    opacity: 0;
-    visibility: hidden;
-}
+
 
 .menu-area ul li:hover .sub-menu {
     opacity: 1;
@@ -5747,7 +5731,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.login-form .single-login a:hover {
+.login-form .single-login a {
     background: #F07C29;
     color: #fff;
     border: 1px solid #F07C29;
@@ -5867,7 +5851,7 @@ nav.menu .cr-dropdown ul {
     font-weight: 400;
 }
 
-.single-register>a:hover {
+.single-register>a {
     background-color: #F07C29;
     color: #fff;
     border: 1px solid #F07C29;
