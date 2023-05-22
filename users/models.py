@@ -55,7 +55,6 @@ class APPUser(AbstractBaseUser):
     bio= models.CharField(default='', max_length=200, blank=False, null=False)
     username= models.CharField(default='', max_length=30, blank=False, null=False)
 
-  
     objects = APPUserManager()
 
     USERNAME_FIELD = 'email'
