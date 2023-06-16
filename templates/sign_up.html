@@ -71,22 +71,18 @@
 					</div>
                     <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
                         <div class="billing-fields">
-                            <form action="" method="post">
+                            <form action="" method="post"> {% csrf_token %}
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="single-register">
-                                            <form action="#">
                                                 <label>First Name<span></span></label>
-                                                <input type="text" />
-                                            </form>
+                                                <input class="form-control" name="first_name" required type="text" />
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="single-register">
-                                            <form action="#">
                                                 <label>Last Name<span></span></label>
-                                                <input type="text" />
-                                            </form>
+                                                <input class="form-control" name="last_name" required type="text" />
                                         </div>
                                     </div>
                                 </div>
@@ -94,62 +90,53 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="single-register">
-                                            <form action="#">
                                                 <label>Email Address<span></span></label>
-                                                <input type="text" />
-                                            </form>
+                                                <input class="form-control" name="email_address" required type="email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="single-register">   
+                                                <label>Phone Number<span></span></label>
+                                                <input class="form-control" name="phone_number" required type="text" />   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="single-register">
+                                            <label>Country<span></span></label>
+                                            <input class="form-control" name="country" required type="text" />
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="single-register">
-                                            <form action="#">
-                                                <label>Phone Number<span></span></label>
-                                                <input type="text" />
-                                            </form>
+                                            <label>Town/City<span></span></label>
+                                            <input class="form-control" name="town" required type="text" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="single-register">
-                                    <form action="#">
-                                        <label>Country<span></span></label>
-                                        <input type="text" />
-                                    </form>
-                                </div>
                                 
-                                <div class="single-register">
-                                    <form action="#">
-                                        <label>Town/City<span></span></label>
-                                        <input type="text" />
-                                    </form>
-                                </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        
+                                        <div class="single-register">
+                                            <label>Password<span></span></label>
+                                            <input class="form-control" name="password" type="text" required placeholder="Password" />
+                                        </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        
+                                        <div class="single-register">
+                                            <label>Confirm password<span></span></label>
+                                            <input class="form-control" name="confirm_password" type="text" required placeholder="Password" /> 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="single-register">
-                                    <form action="#">
-                                        <label>Password<span></span></label>
-                                        <input type="text" placeholder="Password" />
-                                    </form>
-                                </div>
-                                <div class="single-register">
-                                    <form action="#">
-                                        <label>Confirm password<span></span></label>
-                                        <input type="text" placeholder="Password" />
-                                    </form>
                                 </div>
                                 <div class="single-register single-register-3">
                                     <!-- <input id="rememberme" type="checkbox" name="rememberme" value="forever"> -->
                                     <!-- <label class="inline">I agree <a href="#">Terms & Condition</a></label> -->
                                 </div>
                                 <div class="single-register">
-                                    <button type="submit" href="#">Sign Up</button type="submit">
+                                    <button class="btn btn-primary" type="submit" href="#">Sign Up</button type="submit">
                                 </div>
-                        </form>
                         </div>
                     </div>
 					
