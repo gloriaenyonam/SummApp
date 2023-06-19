@@ -10,18 +10,21 @@ def home(request):
 def log_in(request):
     if request.method == "POST":
         email= request.POST.get("email_address")
+        print("email_address", email)
         password= request.POST.get("password")
+        print("password", password)
         try:
             APPUser.objects.get(email=email)
         except:
             messages.error(request, "Email does not exist.", extra_tags='error-class')
             return redirect("/log_in/")
         user = authenticate(email=email, password=password)
-
+        print("user", user)
         if user is not None and user.is_active == True:
              login(request, user)
-             return redirect("/log_in/")
-           
+             return redirect("/")
+        messages.error(request, "Password is incorrect.", extra_tags='error-class')
+        return redirect("/log_in/")       
 
     return render(request, 'log_in.html')
 
