@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 
 from users.models import APPUser
 
@@ -6,6 +8,21 @@ def home(request):
     return render(request, 'home.html')
 
 def log_in(request):
+    if request.method == "POST":
+        email= request.POST.get("email_address")
+        password= request.POST.get("password")
+        try:
+            APPUser.objects.get(email=email)
+        except:
+            messages.error(request, "Email does not exist.", extra_tags='error-class')
+            return redirect("/log_in/")
+        user = authenticate(email=email, password=password)
+
+        if user is not None and user.is_active == True:
+             login(request, user)
+             return redirect("/log_in/")
+           
+
     return render(request, 'log_in.html')
 
 def summary(request):
@@ -18,24 +35,19 @@ def sign_up(request):
 #    print("method", request.method)
     if request.method == "POST":
         first_name= request.POST.get("first_name")
-        print("first_name")
         last_name= request.POST.get("last_name")
-        print("last_name")
         email= request.POST.get("email_address")
-        print("email")
         phone_number= request.POST.get("phone_number")
-        print("phone_number")
         country= request.POST.get("country")
-        print("country")
         city= request.POST.get("city")
-        print("city")
         password= request.POST.get("password")
-        print("password")
         confirm_password= request.POST.get("confirm_password")
-        print("confirm_password")
         if password != confirm_password:
-            print("passwords don't match")
-            return ""
+            messages.error(request, "passwords don't match.", extra_tags='error-class')
+            return redirect("/sign_up/")
+        if len(password) < 6:
+            messages.error(request, "password should be more than 6 characters.", extra_tags='error-class')
+            return redirect("/sign_up/")
         try:
             APPUser.objects.get(email=email)
             print("email already exists")

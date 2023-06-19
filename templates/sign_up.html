@@ -134,6 +134,17 @@
                                     <!-- <input id="rememberme" type="checkbox" name="rememberme" value="forever"> -->
                                     <!-- <label class="inline">I agree <a href="#">Terms & Condition</a></label> -->
                                 </div>
+                                
+                                {% if messages %}
+                                    <ul class="messages">
+                                        {% for message in messages %}
+                                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}{% if 'error-class' in message.tags %} style="color: red;"{% endif %}>{{ message }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+
+                                <br>
+
                                 <div class="single-register">
                                     <button class="btn btn-primary" type="submit" href="#">Sign Up</button type="submit">
                                 </div>
